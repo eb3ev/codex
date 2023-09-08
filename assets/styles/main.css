@@ -1,4 +1,37 @@
+:root {
+    --page-nav-width: 200px;
+    --page-nav-list-text-color: gray;
+    --page-nav-list-text-color-hovered: white;
+}
+
 body {
     background-color: black;
     color: white;
+}
+
+.page-nav {
+    height: 100%;
+    width: var(--page-nav-width);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: fixed;
+    border-right: 1px solid white;
+    overflow-x: hidden;
+
+}
+
+.page-nav a {
+    padding: 10px 10px 10px 32px;
+    display: block;
+    text-decoration: none;
+    color: var(--page-nav-list-text-color);
+}
+
+.page-nav a:hover {
+    color: var(--page-nav-list-text-color-hovered);
+}
+
+.main {
+    margin-left: calc(var(--page-nav-width) + 20px);
 }
