@@ -21,11 +21,6 @@ body {
 
 }
 
-.page-nav header a {
-    text-align: center;
-    color: white;
-}
-
 .page-nav a {
     padding: 10px 10px 10px 32px;
     display: block;

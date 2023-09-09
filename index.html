@@ -4,16 +4,35 @@
         <title>Codex</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="assets/styles/main.css">
+        <!--<script type="text/javascript" src="assets/scripts/page-nav.js"></script>-->
+        <script type="module" src="node_modules/zero-md/dist/zero-md.min.js"></script>
+        <script type="text/javascript">
+            function loadPage(page) {
+                var pageDiv = document.getElementById("page-content");
+                pageDiv.innerHTML = "\
+                    <zero-md src='" + page + "'>\
+                        <template>\
+                            <link rel='stylesheet' href='assets/styles/main.css'>\
+                        </template>\
+                    </zero-md>\
+                "
+            }
+        </script>
     </head>
     <body>
-        <script type="text/javascript" src="assets/scripts/page-nav.js"></script>
-        <div class="main">
-            <h1>Codex</h1>
-            <hr>
-
-            <p>
-                This is an information site.
-            </p>
+        <div id="page-content" class="main">
+            <script type="text/javascript">
+                loadPage("pages/home.md");
+            </script>
+        </div>
+        <div id="page-nav" class="page-nav">
+            <Header>
+                <Center>
+                    <h1>Codex</h1>
+                </Center>
+            </Header>
+            <a href="javascript:loadPage('README.md')">LINK</a>
+            <a href="javascript:loadPage('pages/home.md')">LINK</a>
         </div>
     </body>
 </html>
