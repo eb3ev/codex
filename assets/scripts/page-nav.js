@@ -1,7 +1,7 @@
 const pages = [
-    "/pages/test-page-0.html",
-    "/pages/test-page-1.html",
-    "/pages/test-page-2.html"
+    "pages/test-page-0.html",
+    "pages/test-page-1.html",
+    "pages/test-page-2.html"
 ];
 
 // Get page navigation container
