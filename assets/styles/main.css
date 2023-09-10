@@ -1,7 +1,7 @@
 :root {
     --page-nav-width: 200px;
-    --page-nav-list-text-color: gray;
-    --page-nav-list-text-color-hovered: white;
+    --page-nav-list-text-color: #D0D0D0;
+    --page-nav-list-text-color-hovered: #FFFFFF;
 }
 
 body {
@@ -21,8 +21,28 @@ body {
 
 }
 
-.page-nav-list a {
+.page-nav header a {
+    text-decoration: none;
+    color: var(--page-nav-list-text-color-hovered);
+}
+
+.page-nav-list {
     padding: 10px 10px 10px 32px;
+}
+
+.page-nav-list .page-nav-h1 {
+    color: #FFFFFF;
+    font-size: 1em;
+}
+
+.page-nav-list .page-nav-h2 {
+    padding-left: 16px;
+    color: #808080;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.page-nav-list a {
     display: block;
     text-decoration: none;
     color: var(--page-nav-list-text-color);
@@ -30,6 +50,17 @@ body {
 
 .page-nav-list a:hover {
     color: var(--page-nav-list-text-color-hovered);
+    font-size: 1.01em;
+}
+
+.page-nav-list .page-nav-link1 {
+    text-indent: 0px;
+    font-size: 1em;
+}
+
+.page-nav-list .page-nav-link2 {
+    text-indent: 24px;
+    font-size: 0.85em;
 }
 
 .main {
