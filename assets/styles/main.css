@@ -21,14 +21,14 @@ body {
 
 }
 
-.page-nav a {
+.page-nav-list a {
     padding: 10px 10px 10px 32px;
     display: block;
     text-decoration: none;
     color: var(--page-nav-list-text-color);
 }
 
-.page-nav a:hover {
+.page-nav-list a:hover {
     color: var(--page-nav-list-text-color-hovered);
 }
 
