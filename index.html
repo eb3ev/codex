@@ -4,13 +4,13 @@
         <title>Codex</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="assets/styles/main.css">
-        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <!--<script src="assets/scripts/page-nav.js"></script>-->
         <script type="text/javascript">
             function loadPage(page) {
                 sessionStorage.setItem("currPage", page);
                 $(document).ready(function() {
-                    $("#page-content").load(page);
+                    $("#page").load(page);
                 });
             }
 
@@ -28,12 +28,12 @@
         </script>
     </head>
     <body>
-        <div id="page-content" class="main">
+        <div id="page" class="page">
             <script type="text/javascript">
                 reloadPage();
             </script>
         </div>
-        <div id="page-nav" class="page-nav">
+        <div id="nav" class="nav">
             <Header>
                 <Center>
                     <a href="javascript:loadPage('pages/home.html')">
@@ -41,43 +41,42 @@
                     </a>
                 </Center>
             </Header>
-            <div class="page-nav-list">
+            <div class="nav-list">
 <!--Programming-->
-                <span class="page-nav-h1">Programming</span>
+                <span class="nav-h nav-h1">Programming</span>
 <!--Progamming Concepts-->
-                <span class="page-nav-h2">Concepts</span>
+                <span class="nav-h nav-h2">Concepts</span>
 <!--Imperative Programming-->
-                <a class="page-nav-link2" href="javascript:loadPage('pages/programming/concepts/imperative.html')">
+                <a class="nav-link nav-link2" href="javascript:loadPage('pages/programming/concepts/imperative.html')">
                     Imperative
                 </a>
 <!--Object-oriented Programming-->
-                <a class="page-nav-link2" href="javascript:loadPage('pages/programming/concepts/object-oriented.html')">
+                <a class="nav-link nav-link2" href="javascript:loadPage('pages/programming/concepts/object-oriented.html')">
                     Object-oriented
                 </a>
 <!--Programming Languages-->
-                <span class="page-nav-h2">Languages</span>
+                <span class="nav-h nav-h2">Languages</span>
 <!--C-->
-                <a class="page-nav-link2" href="javascript:loadPage('pages/programming/languages/c.html')">
+                <a class="nav-link nav-link2" href="javascript:loadPage('pages/programming/languages/c.html')">
                     C
                 </a>
 <!--C++-->
-                <a class="page-nav-link2" href="javascript:loadPage('pages/programming/languages/cpp.html')">
+                <a class="nav-link nav-link2" href="javascript:loadPage('pages/programming/languages/cpp.html')">
                     C++
                 </a>
 <!--C#-->
-                <a class="page-nav-link2" href="javascript:loadPage('pages/programming/languages/c-sharp.html')">
+                <a class="nav-link nav-link2" href="javascript:loadPage('pages/programming/languages/c-sharp.html')">
                     C#
                 </a>
 <!--HTML-->
-                <a class="page-nav-link2" href="javascript:loadPage('pages/programming/languages/html.html')">
+                <a class="nav-link nav-link2" href="javascript:loadPage('pages/programming/languages/html.html')">
                     HTML
                 </a>
 <!--Python-->
-                <a class="page-nav-link2" href="javascript:loadPage('pages/programming/languages/python.html')">
+                <a class="nav-link nav-link2" href="javascript:loadPage('pages/programming/languages/python.html')">
                     Python
                 </a>
             </div>
         </div>
-        <script type="text/javascript" src="assets/scripts/page-nav.js"></script>
     </body>
 </html>

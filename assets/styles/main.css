@@ -1,71 +1,92 @@
 :root {
-    --page-nav-width: 200px;
-    --page-nav-list-text-color: #D0D0D0;
-    --page-nav-list-text-color-hovered: #FFFFFF;
+    /* Main Theme */
+    --col-primary: #FFFFFF;
+    --col-secondary: #D0D0D0;
+    --col-tertiary: #808080;
+    --col-accent: #FFFFFF;
+    --col-bg: #000000;
+    --col-fg: #FFFFFF;
+
+    /* Navigation Pane */
+    --nav-col-bg: var(col-bg);
+    --nav-col-fg: var(col-fg);
+    --nav-width: 200px;
+    --nav-list-indent: 16px;
+    --nav-list-h1-fg: var(--col-fg);
+    --nav-list-h2-fg: var(--col-tertiary);
+    --nav-list-link-fg: var(--col-secondary);
+    --nav-list-link-hovered-fg: var(--col-fg);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
-    background-color: black;
-    color: white;
+    background-color: var(--col-bg);
+    color: var(--col-fg);
     margin-right: auto;
     margin-left: auto;
     max-width: 1200px; 
 }
 
-.page-nav {
-    height: 100%;
-    width: var(--page-nav-width);
+.page { 
+    margin-left: var(--nav-width);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nav {
+    background-color: var(--nav-col-bg);
+    color: var(--nav-col-fg);
+    height: 100vh;
+    width: var(--nav-width);
     top: 0;
     left: 0;
     z-index: 1;
     position: fixed;
-    border-right: 1px solid white;
+    border-right: 1px solid var(--col-accent);
     overflow-x: hidden;
 
 }
 
-.page-nav header a {
+.nav header { }
+
+.nav header a {
+    color: var(--nav-col-fg);
     text-decoration: none;
-    color: var(--page-nav-list-text-color-hovered);
 }
 
-.page-nav-list {
+.nav-list {
     padding: 10px 10px 10px 32px;
 }
 
-.page-nav-list .page-nav-h1 {
-    color: #FFFFFF;
+.nav-h {
+}
+
+.nav-h1 {
+    color: var(--nav-list-h1-fg);
     font-size: 1em;
 }
 
-.page-nav-list .page-nav-h2 {
-    padding-left: 16px;
-    color: #808080;
-    font-style: italic;
+.nav-h2 {
+    color: var(--nav-list-h2-fg);
     font-size: 0.9em;
+    font-style: italic;
+    padding-left: calc(calc(var(--nav-list-indent) * 1) - 4px);
 }
 
-.page-nav-list a {
+.nav-link {
     display: block;
     text-decoration: none;
-    color: var(--page-nav-list-text-color);
+    color: var(--nav-list-link-fg);
 }
 
-.page-nav-list a:hover {
-    color: var(--page-nav-list-text-color-hovered);
+.nav-link:hover {
+    color: var(--nav-list-link-hovered-fg);
     font-size: 1.01em;
 }
 
-.page-nav-list .page-nav-link1 {
-    text-indent: 0px;
-    font-size: 1em;
-}
-
-.page-nav-list .page-nav-link2 {
-    text-indent: 24px;
-    font-size: 0.85em;
-}
-
-.main {
-    margin-left: calc(var(--page-nav-width) + 20px);
+.nav-link2 {
+    text-indent: calc(var(--nav-list-indent) * 1);
 }
