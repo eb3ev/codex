@@ -3,6 +3,7 @@
     <head>
         <title>Codex</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="assets/styles/main.css">
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <!--<script src="assets/scripts/page-nav.js"></script>-->
@@ -32,6 +33,9 @@
             <script type="text/javascript">
                 reloadPage();
             </script>
+        </div>
+        <div id="nav-button" class="nav-button">
+            <span onclick="toggleNav()"> > </span>
         </div>
         <div id="nav" class="nav">
             <Header>
@@ -78,5 +82,22 @@
                 </a>
             </div>
         </div>
+        <script>
+            function toggleNav() {
+                let nav = document.getElementById("nav");
+                let navButton = document.getElementById("nav-button");
+                let page = document.getElementById("page");
+                if (nav.style.width == "0px") {
+                    nav.style.width = "200px";
+                    navButton.style.marginLeft = "200px";
+                    page.style.marginLeft = "200px";
+                } else {
+                    nav.style.width = "0px";
+                    navButton.style.marginLeft = "0px";
+                    page.style.marginLeft = "0px";
+                }
+
+            }
+        </script>
     </body>
 </html>

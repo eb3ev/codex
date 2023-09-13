@@ -36,6 +36,19 @@ body {
     padding-right: 20px;
 }
 
+.nav-button {
+    height: 40px;
+    background-color: var(--nav-col-bg);
+    width: 20px;
+    z-index: 1;
+    position: fixed;
+    top: 20px;
+    padding: 4px;
+    margin-left: var(--nav-width);
+    border: 1px solid var(--col-accent);
+    border-left: 0px;
+}
+
 .nav {
     background-color: var(--nav-col-bg);
     color: var(--nav-col-fg);
