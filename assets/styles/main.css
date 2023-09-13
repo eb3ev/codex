@@ -32,8 +32,8 @@ body {
 
 .page { 
     margin-left: var(--nav-width);
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 .nav-button {
@@ -42,11 +42,10 @@ body {
     width: 20px;
     z-index: 1;
     position: fixed;
-    top: 20px;
     padding: 4px;
+    top: 20px;
     margin-left: var(--nav-width);
-    border: 1px solid var(--col-accent);
-    border-left: 0px;
+    cursor: pointer;
 }
 
 .nav {
@@ -55,7 +54,6 @@ body {
     height: 100vh;
     width: var(--nav-width);
     top: 0;
-    left: 0;
     z-index: 1;
     position: fixed;
     border-right: 1px solid var(--col-accent);
