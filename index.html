@@ -5,29 +5,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="assets/styles/main.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+        <link rel="stylesheet" href="assets/styles/hljs.css">
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
-        <!--<script src="assets/scripts/page-nav.js"></script>-->
-        <script type="text/javascript">
-            function loadPage(page) {
-                sessionStorage.setItem("currPage", page);
-                $(document).ready(function() {
-                    $("#page").load(page);
-                });
-            }
-
-            function reloadPage()
-            {
-                if (sessionStorage.getItem("currPage")) {
-                    let currPage = sessionStorage.getItem("currPage");
-
-                    loadPage(currPage);
-                } else {
-                    loadPage("pages/home.html")
-                }
-            }
-
-        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="assets/scripts/index.js"></script>
     </head>
     <body>
         <div id="main-header" class="main-header">
@@ -80,7 +61,8 @@
                     Object-oriented
                 </a>
 <!-- Concurrency Programming-->
-                <a class="nav-2" onClick="loadPage('pages/programming/concepts/concurrency.html');">
+                <a class="nav-2"
+                    onClick="loadPage('pages/programming/concepts/concurrency.html');">
                     Concurrency
                 </a>
 <!-- Development -->
@@ -164,28 +146,5 @@
                 <span class="nav-1 nav-h1">Windows</span>
             </div>
         </div>
-        <script>
-            function toggleNav() {
-                let nav = document.getElementById("nav");
-                let mainHeader = document.getElementById("main-header");
-                let page = document.getElementById("page");
-                if (nav.style.width == "0px") {
-                    nav.style.width = "200px";
-                    nav.style.borderRight = "1px solid var(--col-accent)";
-                    mainHeader.style.marginLeft = "200px";
-                    //mainHeader.style.borderLeft = "0px";
-                    page.style.marginLeft = "200px";
-                } else {
-                    nav.style.width = "0";
-                    nav.style.borderRight = "0";
-                    mainHeader.style.marginLeft = "0";
-                    //mainHeader.style.borderLeft = "1px solid var(--col-accent)";
-                    page.style.marginLeft = "0";
-                }
-
-            }
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script>
     </body>
 </html>
