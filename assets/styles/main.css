@@ -17,13 +17,14 @@
 }
 
 /* Main */
-/*==============*/
+/*======*/
 
 * {
     box-sizing: border-box;
 }
 
 body {
+    font-family: sans-serif, monospace;
     background-color: var(--col-base);
     color: var(--col-inv);
     margin-right: auto;
@@ -86,19 +87,6 @@ body {
 
 }
 
-@media screen and (max-width: 480px) {
-    .nav {
-        width: 0px;
-        border-right: 0px;
-    }
-    .main-header {
-        margin-left: 0px;
-    }
-    .page { 
-        margin-left: 0px;
-    }
-}
-
 .nav header { }
 
 .nav header a {
@@ -159,6 +147,7 @@ body {
     margin-left: var(--nav-width);
     padding-left: 32px;
     padding-right: 32px;
+    overflow: scroll;
 }
 
 .page h1 {
@@ -174,6 +163,11 @@ body {
     border: none;
     height: 1px;
     margin: 0;
+    margin-bottom: 1em;
+}
+
+.page p {
+    text-align: justfiy;
 }
 
 .page .web-link {
@@ -182,4 +176,20 @@ body {
 
 .page .web-link:hover {
     color: var(--col-inv);
+}
+
+/* Device Specific */
+/*=================*/
+
+@media screen and (max-width: 480px) {
+    .nav {
+        width: 0;
+        border-right: 0;
+    }
+    .main-header {
+        margin-left: 0;
+    }
+    .page { 
+        margin-left: 0;
+    }
 }
