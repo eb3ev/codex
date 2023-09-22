@@ -1,49 +1,47 @@
+/*==========*/
+/* Main CSS */
+/*==========*/
+
+/* Colours */
+/*=========*/
+
 :root {
     /* Main Theme */
     --col-primary: #FFFFFF;
     --col-secondary: #D0D0D0;
     --col-tertiary: #808080;
     --col-accent: #FFFFFF;
-    --col-bg: #000000;
-    --col-fg: #FFFFFF;
 
-    /* Navigation Pane */
-    --nav-col-bg: var(col-bg);
-    --nav-col-fg: var(col-fg);
-    --nav-width: 200px;
-    --nav-list-indent: 16px;
-    --nav-list-h1-fg: var(--col-fg);
-    --nav-list-h2-fg: var(--col-tertiary);
-    --nav-list-link-fg: var(--col-secondary);
-    --nav-list-link-hovered-fg: var(--col-fg);
+    --col-base: #000000;
+    --col-inv: #FFFFFF;
 }
+
+/* Main */
+/*==============*/
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: var(--col-bg);
-    color: var(--col-fg);
+    background-color: var(--col-base);
+    color: var(--col-inv);
     margin-right: auto;
     margin-left: auto;
     max-width: 1200px; 
-    margin-top: 0px;
+    padding: 0;
+    margin: 0;
 }
 
-.page { 
-    margin-left: var(--nav-width);
-    padding-left: 32px;
-    padding-right: 32px;
-}
+/* Header */
+/*========*/
 
 .main-header {
     margin-left: var(--nav-width);
-    background-color: black;
+    background-color: var(--col-base);
     top: 0;
     overflow-x: hidden;
     padding: 4px 8px 4px 8px;
-    border-top: 1px solid var(--col-accent);
 }
 
 .nav-button {
@@ -53,10 +51,26 @@ body {
 }
 
 .hamburger-icon {
-     width: 20px;
-     height: 2px;
-     background-color: white;
-     margin: 4px 0;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 4px 0;
+
+}
+
+/* Navigation Pane */
+/*=================*/
+
+:root {
+    /* Navigation Pane */
+    --nav-col-bg: var(col-base);
+    --nav-col-fg: var(col-inv);
+    --nav-width: 200px;
+    --nav-list-indent: 16px;
+    --nav-list-col-h1: var(--nav-col-fg);
+    --nav-list-col-h2: var(--col-tertiary);
+    --nav-list-col-link: var(--col-secondary);
+    --nav-list-col-link-hovered: var(--nav-col-fg);
 }
 
 .nav {
@@ -97,10 +111,10 @@ body {
 .nav-list {
     padding: 10px 10px 10px 32px;
     overflow: scroll;
-    user-select: none; // Chrome and Opera
-    -moz-user-select: none; // Firefox
-    -webkit-text-select: none; // IOS Safari
-    -webkit-user-select: none; // Safari``
+    user-select: none; /* Chrome and Opera */
+    -moz-user-select: none; /* Firefox */
+    -webkit-text-select: none; /* IOS Safari */
+    -webkit-user-select: none; /* Safari */
 }
 
 .nav-list span {
@@ -109,20 +123,10 @@ body {
 
 .nav-list a {
     display: block;
-    color: var(--nav-list-link-fg);
+    color: var(--nav-list-col-link);
     text-decoration: none;
     cursor: pointer;
     cursor: hand;
-}
-
-.nav-h1 {
-    color: var(--nav-list-h1-fg);
-}
-
-.nav-h2 {
-    color: var(--nav-list-h2-fg);
-    font-size: 0.9em;
-    font-style: italic;
 }
 
 .nav-1 {
@@ -133,8 +137,49 @@ body {
     text-indent: calc(var(--nav-list-indent) * 1);
 }
 
-.nav-list a:hover {
-    color: var(--nav-list-link-hovered-fg);
-    font-size: 1.01em;
+.nav-h1 {
+    color: var(--nav-list-col-h1);
 }
 
+.nav-h2 {
+    color: var(--nav-list-col-h2);
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.nav-list a:hover {
+    color: var(--nav-list-col-link-hovered);
+    font-size: 1.05em;
+}
+
+/* Content Page */
+/*==============*/
+
+.page { 
+    margin-left: var(--nav-width);
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.page h1 {
+    margin: 0;
+}
+
+.page h2 {
+    margin: 0;
+}
+
+.page hr {
+    background-color: var(--col-inv);
+    border: none;
+    height: 1px;
+    margin: 0;
+}
+
+.page .web-link {
+    color: var(--col-secondary);
+}
+
+.page .web-link:hover {
+    color: var(--col-inv);
+}
