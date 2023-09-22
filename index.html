@@ -29,74 +29,140 @@
         </script>
     </head>
     <body>
+        <div id="main-header" class="main-header">
+            <button id="nav-button" class="nav-button" onclick="toggleNav()">
+                <div class="hamburger-icon"></div>
+                <div class="hamburger-icon"></div>
+                <div class="hamburger-icon"></div>
+            </button>
+        </div>
         <div id="page" class="page">
             <script type="text/javascript">
                 reloadPage();
             </script>
         </div>
-        <button id="nav-button" class="nav-button arrow arrow-right" onclick="toggleNav()">
-            >
-        </button>
         <div id="nav" class="nav">
             <Header>
                 <Center>
-                    <a href="javascript:loadPage('pages/home.html')">
+                    <a onClick="loadPage('pages/home.html');">
                         <h1>Codex</h1>
                     </a>
                 </Center>
             </Header>
             <div class="nav-list">
+<!-- Cooking -->
+<!--=========-->
+                <span class="nav-h1 nav-1">Cooking</span>
+<!-- Economics -->
+<!--===========-->
+                <span class="nav-h1 nav-1">Economics</span>
+<!-- Health -->
+<!--========-->
+                <span class="nav-h1 nav-1">Health</span>
+<!-- Linux -->
+<!--=======-->
+                <span class="nav-h1 nav-1">Linux</span>
 <!-- Programming -->
 <!--=============-->
-                <span class="nav-h nav-h1">Programming</span>
+                <span class="nav-h1 nav-1">Programming</span>
 <!-- Progamming Concepts -->
 <!------------------------->
-                <span class="nav-h nav-h2">Concepts</span>
+                <span class="nav-h2 nav-2">Concepts</span>
 <!--Imperative Programming-->
-                <a class="nav-link nav-link2" href="javascript:loadPage('pages/programming/concepts/imperative.html')">
+                <a class="nav-2" onClick="loadPage('pages/programming/concepts/imperative.html');">
                     Imperative
                 </a>
 <!--Object-oriented Programming-->
-                <a class="nav-link nav-link2" href="javascript:loadPage('pages/programming/concepts/object-oriented.html')">
+                <a class="nav-2" onClick="loadPage('pages/programming/concepts/object-oriented.html');">
                     Object-oriented
                 </a>
+<!-- Concurrency Programming-->
+                <a class="nav-2" onClick="loadPage('pages/programming/concepts/concurrency.html');">
+                    Concurrency
+                </a>
+<!-- Development -->
+<!----------------->
+                <span class="nav-h2 nav-2">Development</span>
 <!-- Programming Languages -->
 <!--------------------------->
-                <span class="nav-h nav-h2">Languages</span>
+                <span class="nav-h2 nav-2">Languages</span>
 <!--C-->
-                <a class="nav-link nav-link2" href="javascript:loadPage('pages/programming/languages/c.html')">
+                <a class="nav-2" onClick="loadPage('pages/programming/languages/c.html');">
                     C
                 </a>
+<!--CSS-->
+                <a class="nav-2" onClick="loadPage('pages/programming/languages/css.html');">
+                    CSS
+                </a>
 <!--C++-->
-                <a class="nav-link nav-link2" href="javascript:loadPage('pages/programming/languages/cpp.html')">
+                <a class="nav-2" onClick="loadPage('pages/programming/languages/cpp.html');">
                     C++
                 </a>
 <!--C#-->
-                <a class="nav-link nav-link2" href="javascript:loadPage('pages/programming/languages/c-sharp.html')">
+                <a class="nav-2" onClick="loadPage('pages/programming/languages/c-sharp.html');">
                     C#
                 </a>
+<!--Go-->
+                <a class="nav-2" onClick="loadPage('pages/programming/languages/go.html');">
+                    Go
+                </a>
+<!--Haskell-->
+                <a class="nav-2" onClick="loadPage('pages/programming/languages/haskell.html');">
+                    Haskell
+                </a>
+<!--Java-->
+                <a class="nav-2" onClick="loadPage('pages/programming/languages/java.html');">
+                    Java
+                </a>
+<!--Javascript-->
+                <a class="nav-2" onClick="loadPage('pages/programming/languages/javascript.html');">
+                    Javascript
+                </a>
 <!--HTML-->
-                <a class="nav-link nav-link2" href="javascript:loadPage('pages/programming/languages/html.html')">
+                <a class="nav-2" onClick="loadPage('pages/programming/languages/haskell.html');">
                     HTML
                 </a>
+<!--Kotlin-->
+                <a class="nav-2" onClick="loadPage('pages/programming/languages/kotlin.html');">
+                    Kotlin
+                </a>
+<!--Lua-->
+                <a class="nav-2" onClick="loadPage('pages/programming/languages/lua.html');">
+                    Lua
+                </a>
+<!--POSIX-->
+                <a class="nav-2" onClick="loadPage('pages/programming/languages/posix.html');">
+                    POSIX
+                </a>
 <!--Python-->
-                <a class="nav-link nav-link2" href="javascript:loadPage('pages/programming/languages/python.html')">
+                <a class="nav-2" onClick="loadPage('pages/programming/languages/python.html');">
                     Python
                 </a>
+<!--Rust-->
+                <a class="nav-2" onClick="loadPage('pages/programming/languages/rust.html');">
+                    Rust
+                </a>
+<!-- Windows -->
+<!--=========-->
+                <span class="nav-h1 nav-1">Windows</span>
             </div>
         </div>
         <script>
             function toggleNav() {
                 let nav = document.getElementById("nav");
-                let navButton = document.getElementById("nav-button");
+                let mainHeader = document.getElementById("main-header");
                 let page = document.getElementById("page");
                 if (nav.style.width == "0px") {
                     nav.style.width = "200px";
-                    navButton.style.marginLeft = "200px";
+                    nav.style.borderRight = "1px solid var(--col-accent)";
+                    mainHeader.style.marginLeft = "200px";
+                    //mainHeader.style.borderLeft = "0px";
                     page.style.marginLeft = "200px";
                 } else {
                     nav.style.width = "0px";
-                    navButton.style.marginLeft = "0px";
+                    nav.style.borderRight = "0px";
+                    mainHeader.style.marginLeft = "0px";
+                    //mainHeader.style.borderLeft = "1px solid var(--col-accent)";
                     page.style.marginLeft = "0px";
                 }
 

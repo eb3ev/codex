@@ -28,6 +28,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     max-width: 1200px; 
+    margin-top: 0px;
 }
 
 .page { 
@@ -36,16 +37,26 @@ body {
     padding-right: 32px;
 }
 
-.nav-button {
-    height: 40px;
-    background-color: var(--nav-col-bg);
-    width: 20px;
-    z-index: 1;
-    position: fixed;
-    padding: 4px;
-    top: 20px;
+.main-header {
     margin-left: var(--nav-width);
+    background-color: black;
+    top: 0;
+    overflow-x: hidden;
+    padding: 4px 8px 4px 8px;
+    border-top: 1px solid var(--col-accent);
+}
+
+.nav-button {
+    background: none;
+    border: none;
     cursor: pointer;
+}
+
+.hamburger-icon {
+     width: 20px;
+     height: 2px;
+     background-color: white;
+     margin: 4px 0;
 }
 
 .nav {
@@ -64,8 +75,9 @@ body {
 @media screen and (max-width: 480px) {
     .nav {
         width: 0px;
+        border-right: 0px;
     }
-    .nav-button {
+    .main-header {
         margin-left: 0px;
     }
     .page { 
@@ -78,38 +90,51 @@ body {
 .nav header a {
     color: var(--nav-col-fg);
     text-decoration: none;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .nav-list {
     padding: 10px 10px 10px 32px;
+    overflow: scroll;
+    user-select: none; // Chrome and Opera
+    -moz-user-select: none; // Firefox
+    -webkit-text-select: none; // IOS Safari
+    -webkit-user-select: none; // Safari``
 }
 
-.nav-h {
+.nav-list span {
+    display: block;
+}
+
+.nav-list a {
+    display: block;
+    color: var(--nav-list-link-fg);
+    text-decoration: none;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .nav-h1 {
     color: var(--nav-list-h1-fg);
-    font-size: 1em;
 }
 
 .nav-h2 {
     color: var(--nav-list-h2-fg);
     font-size: 0.9em;
     font-style: italic;
-    padding-left: calc(calc(var(--nav-list-indent) * 1) - 4px);
 }
 
-.nav-link {
-    display: block;
-    text-decoration: none;
-    color: var(--nav-list-link-fg);
+.nav-1 {
+    font-size: 1em;
 }
 
-.nav-link:hover {
+.nav-2 {
+    text-indent: calc(var(--nav-list-indent) * 1);
+}
+
+.nav-list a:hover {
     color: var(--nav-list-link-hovered-fg);
     font-size: 1.01em;
 }
 
-.nav-link2 {
-    text-indent: calc(var(--nav-list-indent) * 1);
-}
