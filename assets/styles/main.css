@@ -66,8 +66,8 @@ body {
 
 :root {
     /* Navigation Pane */
-    --nav-col-bg: var(col-base);
-    --nav-col-fg: var(col-inv);
+    --nav-col-bg: var(--col-base);
+    --nav-col-fg: var(--col-inv);
     --nav-width: 200px;
     --nav-list-indent: 16px;
     --nav-list-col-h1: var(--nav-col-fg);
