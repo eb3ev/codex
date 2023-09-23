@@ -39,3 +39,11 @@ function toggleNav() {
         page.style.marginLeft = "0";
     }
 }
+
+function setDate() {
+    let date =  new Date();
+    let y = date.getFullYear();
+    let m = date.getMonth() + 1;
+    let d = date.getDate();
+    document.getElementById("date").innerHTML = d + " / " + m + " / " + y;
+}
