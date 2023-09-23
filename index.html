@@ -25,31 +25,85 @@
         </div>
         <div id="nav" class="nav">
             <Header>
-                <Center>
-                    <a onClick="loadPage('pages/home.html');">
-                        <h1>Codex</h1>
-                    </a>
-                </Center>
+                <a onClick="loadPage('pages/home.html');">
+                    <h1>Codex</h1>
+                </a>
             </Header>
             <div class="nav-list">
+                <div class="nav-list-fade-top"></div>
 <!-- Cooking -->
 <!--=========-->
                 <span class="nav-1 nav-h1">Cooking</span>
+<!-- Cooking Theory -->
+<!-------------------->
+                <span class="nav-2 nav-h2">Theory</span>
+<!-- Cooking Recipes -->
+<!--------------------->
+                <span class="nav-2 nav-h2">Recipes</span>
+<!--American-->
+                <span class="nav-3 nav-h2">American</span>
+<!--Chinese-->
+                <span class="nav-3 nav-h2">Chinese</span>
+<!--English-->
+                <span class="nav-3 nav-h2">English</span>
+<!--Filipino-->
+                <span class="nav-3 nav-h2">Filipino</span>
+<!--Italian-->
+                <span class="nav-3 nav-h2">Italian</span>
+<!--Japanese-->
+                <span class="nav-3 nav-h2">Japanese</span>
 <!-- Economics -->
 <!--===========-->
                 <span class="nav-1 nav-h1">Economics</span>
+<!-- Finances -->
+<!-------------->
+                <span class="nav-2 nav-h2">Finance</span>
+<!-- Stock Market -->
+<!------------------>
+                <span class="nav-2 nav-h2">Stock Market</span>
 <!-- Health -->
 <!--========-->
                 <span class="nav-1 nav-h1">Health</span>
+<!-- First Aid -->
+<!--------------->
+                <span class="nav-2 nav-h2">First Aid</span>
 <!-- Linux -->
 <!--=======-->
                 <span class="nav-1 nav-h1">Linux</span>
+<!-- Linux Distributions -->
+<!------------------------->
+                <span class="nav-2 nav-h2">Distributions</span>
+<!-- Arch -->
+<!---------->
+                <span class="nav-3 nav-h2">Arch</span>
+<!--Installation-->
+                <a class="nav-3"
+                    onClick="loadPage('pages/linux/arch/installation.html');">
+                    Installation
+                </a>
+<!-- Music -->
+<!--=======-->
+                <span class="nav-1 nav-h1">Music</span>
+<!-- Music Theory -->
+<!------------------>
+                <span class="nav-2 nav-h2">Theory</span>
+<!-- Guitar -->
+<!------------>
+                <span class="nav-2 nav-h2">Guitar</span>
+<!-- Piano -->
+<!----------->
+                <span class="nav-2 nav-h2">Piano</span>
 <!-- Programming -->
 <!--=============-->
                 <span class="nav-1 nav-h1">Programming</span>
 <!-- Progamming Concepts -->
 <!------------------------->
                 <span class="nav-2 nav-h2">Concepts</span>
+<!-- Concurrency Programming-->
+                <a class="nav-2"
+                    onClick="loadPage('pages/programming/concepts/concurrency.html');">
+                    Concurrency
+                </a>
 <!--Imperative Programming-->
                 <a class="nav-2"
                     onClick="loadPage('pages/programming/concepts/imperative.html');">
@@ -59,11 +113,6 @@
                 <a class="nav-2"
                     onClick="loadPage('pages/programming/concepts/object-oriented.html');">
                     Object-oriented
-                </a>
-<!-- Concurrency Programming-->
-                <a class="nav-2"
-                    onClick="loadPage('pages/programming/concepts/concurrency.html');">
-                    Concurrency
                 </a>
 <!-- Development -->
 <!----------------->
@@ -113,7 +162,7 @@
                 </a>
 <!--HTML-->
                 <a class="nav-2"
-                    onClick="loadPage('pages/programming/languages/haskell.html');">
+                    onClick="loadPage('pages/programming/languages/html.html');">
                     HTML
                 </a>
 <!--Kotlin-->
@@ -144,6 +193,7 @@
 <!-- Windows -->
 <!--=========-->
                 <span class="nav-1 nav-h1">Windows</span>
+                <div class="nav-list-fade-bottom"></div>
             </div>
         </div>
     </body>
