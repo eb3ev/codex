@@ -24,10 +24,16 @@
     box-sizing: border-box;
 }
 
+html {
+    height: -webkit-fill-available;
+}
+
 body {
     font-family: sans-serif, monospace;
     background-color: var(--col-base);
     color: var(--col-inv);
+    height: 100vh;
+    height: -webkit-fill-available;
     margin-right: auto;
     margin-left: auto;
     max-width: 1200px; 
