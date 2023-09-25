@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "jquery": "^3.7.1",
-    "zero-md": "^2.5.3"
+    "jquery": "^3.7.1"
   }
 }
