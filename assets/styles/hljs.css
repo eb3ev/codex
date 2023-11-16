@@ -1,21 +1,6 @@
-@font-face {
-    font-family: "Hack NF Regular";
-    src: url("../fonts/Hack Regular Nerd Font Complete.ttf");
-}
-
-@font-face {
-    font-family: "Hack NF Bold";
-    src: url("../fonts/Hack Bold Nerd Font Complete.ttf");
-}
-
-@font-face {
-    font-family: "Hack NF Italic";
-    src: url("../fonts/Hack Italic Nerd Font Complete.ttf");
-}
-
 .hljs {
-    font-family: "Hack NF Regular", "Hack NF Bold", "Hack NF Italic", monospace;
-    background: #00000;
+    font-family: monospace;
+    background: #1C1C1C;
     color: #FFFFFF;
     margin: 0;
     padding: 0;

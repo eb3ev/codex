@@ -1,20 +1,18 @@
-/*==========*/
-/* Main CSS */
-/*==========*/
 
+/*= Main Css
+*/
 
-/* Colours */
-/*=========*/
 
 :root {
-    /* Main Theme */
-    --col-primary: #FFFFFF;
-    --col-secondary: #D0D0D0;
-    --col-tertiary: #808080;
-    --col-accent: #FFFFFF;
-
-    --col-base: #000000;
-    --col-inv: #FFFFFF;
+/*== Colour Variables
+*/
+    --col-bg: #121212;
+    --col-bg-accent: #585858;
+    --col-bg-accent1: #1C1C1C;
+    --col-fg: #FFFFFF;
+    --col-fg1: #D0D0D0;
+    --col-fg3: #808080;
+    --col-fg-accent: #FFFFFF;
 }
 
 /* Main */
@@ -30,8 +28,8 @@ html {
 
 body {
     font-family: sans-serif, monospace;
-    background-color: var(--col-base);
-    color: var(--col-inv);
+    background-color: var(--col-bg);
+    color: var(--col-fg);
     height: 100vh;
     height: -webkit-fill-available;
     margin-right: auto;
@@ -41,9 +39,8 @@ body {
     margin-top: 0;
 }
 
-/* Header */
-/*========*/
-
+/*== Header
+*/
 .main-header {
     display: flex;
     flex-direction: row;
@@ -51,7 +48,7 @@ body {
     align-content: space-between;
     justify-content: space-between;
     margin-left: var(--nav-width);
-    background-color: var(--col-base);
+    background-color: var(--col-bg-accent1);
     top: 0;
     overflow-x: hidden;
     position: sticky;
@@ -68,7 +65,7 @@ body {
 .hamburger-icon {
     width: 20px;
     height: 2px;
-    background-color: white;
+    background-color: col-fg-accent;
     margin: 4px 0;
 
 }
@@ -77,19 +74,17 @@ body {
     align-self: flex-end;
 }
 
-/* Navigation Pane */
-/*=================*/
-
+/*== Navigation Pane
+*/
 :root {
-    /* Navigation Pane */
-    --nav-col-bg: var(--col-base);
-    --nav-col-fg: var(--col-inv);
+    --nav-col-bg: var(--col-bg-accent1);
+    --nav-col-fg: var(--col-fg-accent);
     --nav-width: 200px;
     --nav-list-indent: 16px;
-    --nav-list-col-h1: var(--nav-col-fg);
-    --nav-list-col-h2: var(--col-tertiary);
-    --nav-list-col-link: var(--col-secondary);
-    --nav-list-col-link-hovered: var(--nav-col-fg);
+    --nav-list-col-h1: var(--col-fg);
+    --nav-list-col-h2: var(--col-fg2);
+    --nav-list-col-link: var(--col-fg1);
+    --nav-list-col-link-hovered: var(--col-fg-accent);
 }
 
 .nav {
@@ -102,13 +97,13 @@ body {
     top: 0;
     z-index: 1;
     position: fixed;
-    border-right: 1px solid var(--col-accent);
+    border-right: 1px solid var(--col-bg-accent);
     overflow-x: hidden;
 
 }
 
 .nav header {
-    background-color: var(--col-base);
+    background-color: var(--nav-col-bg);
     position: sticky;
     text-align: center;
 }
@@ -214,7 +209,7 @@ body {
 }
 
 .page hr {
-    background-color: var(--col-inv);
+    background-color: var(--col-bg-accent);
     border: none;
     height: 1px;
     margin: 0;
@@ -226,11 +221,11 @@ body {
 }
 
 .page .web-link {
-    color: var(--col-secondary);
+    color: var(--col-fg1);
 }
 
 .page .web-link:hover {
-    color: var(--col-inv);
+    color: var(--col-fg-accent);
 }
 
 /* Device Specific */

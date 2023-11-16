@@ -22,7 +22,7 @@ function toggleNav() {
 
     let nav = document.getElementById("nav");
     let navWidth = css.getPropertyValue("--nav-width");
-    let navBorderRight = "1px solid var(--col-accent)"
+    let navBorderRight = "1px solid var(--col-bg-accent)"
 
     let mainHeader = document.getElementById("main-header");
     let page = document.getElementById("page");
