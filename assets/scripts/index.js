@@ -22,19 +22,16 @@ function toggleNav() {
 
     let nav = document.getElementById("nav");
     let navWidth = css.getPropertyValue("--nav-width");
-    let navBorderRight = "1px solid var(--col-bg-accent)"
 
     let mainHeader = document.getElementById("main-header");
     let page = document.getElementById("page");
 
     if (nav.style.width == "0px") {
         nav.style.width = navWidth;
-        nav.style.borderRight = navBorderRight;
         mainHeader.style.marginLeft = navWidth;
         page.style.marginLeft = navWidth;
     } else {
         nav.style.width = "0";
-        nav.style.borderRight = "0";
         mainHeader.style.marginLeft = "0";
         page.style.marginLeft = "0";
     }

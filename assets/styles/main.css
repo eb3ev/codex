@@ -1,22 +1,23 @@
 
-/*= Main Css
+/*= Main CSS
 */
 
 
+/*== Colours
+*/
 :root {
-/*== Colour Variables
-*/
     --col-bg: #121212;
     --col-bg-accent: #585858;
     --col-bg-accent1: #1C1C1C;
     --col-fg: #FFFFFF;
     --col-fg1: #D0D0D0;
-    --col-fg3: #808080;
+    --col-fg2: #808080;
     --col-fg-accent: #FFFFFF;
 }
 
-/* Main */
-/*======*/
+
+/*== Main
+*/
 
 * {
     box-sizing: border-box;
@@ -27,7 +28,7 @@ html {
 }
 
 body {
-    font-family: sans-serif, monospace;
+    font-family: monospace;
     background-color: var(--col-bg);
     color: var(--col-fg);
     height: 100vh;
@@ -38,6 +39,7 @@ body {
     padding: 0;
     margin-top: 0;
 }
+
 
 /*== Header
 */
@@ -65,7 +67,7 @@ body {
 .hamburger-icon {
     width: 20px;
     height: 2px;
-    background-color: col-fg-accent;
+    background-color: var(--col-fg-accent);
     margin: 4px 0;
 
 }
@@ -73,6 +75,7 @@ body {
 .date {
     align-self: flex-end;
 }
+
 
 /*== Navigation Pane
 */
@@ -97,7 +100,6 @@ body {
     top: 0;
     z-index: 1;
     position: fixed;
-    border-right: 1px solid var(--col-bg-accent);
     overflow-x: hidden;
 
 }
@@ -173,26 +175,9 @@ body {
     background-repeat: no-repeat;
 }
 
-.nav-list-fade-top {
-    top: 0;
-    background-image: linear-gradient(to bottom,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 0) 100%
-    );
-}
 
-.nav-list-fade-bottom {
-    bottom: 0;
-    background-image: linear-gradient(to top,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 0) 100%
-    );
-    margin-top: 10px;
-}
-
-/* Content Page */
-/*==============*/
-
+/*== Content Page
+*/
 .page { 
     margin-left: var(--nav-width);
     padding-left: 32px;
@@ -228,9 +213,9 @@ body {
     color: var(--col-fg-accent);
 }
 
-/* Device Specific */
-/*=================*/
 
+/*== Device Specific
+*/
 @media screen and (max-width: 480px) {
     .nav {
         width: 0;
