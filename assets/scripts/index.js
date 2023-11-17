@@ -51,8 +51,12 @@ mql.addEventListener("change", function(e) {
     }
 });
 
+let prevWidth = window.innerWidth;
 window.addEventListener('resize', function() {
-    let nav = document.getElementById("nav");
-    nav.style = "";
+    if (window.innerWidth !== prevWidth) {
+        let nav = document.getElementById("nav");
+        nav.style = "";
+        prevWidth = window.innerWidth
+    }
 }, true);
 
