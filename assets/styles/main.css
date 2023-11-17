@@ -29,6 +29,7 @@ html {
 
 body {
     font-family: monospace;
+    font-size: 16px;
     background-color: var(--col-bg);
     color: var(--col-fg);
     height: 100vh;
@@ -41,53 +42,17 @@ body {
 }
 
 
-/*== Header
-*/
-.main-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: space-between;
-    justify-content: space-between;
-    margin-left: var(--nav-width);
-    background-color: var(--col-bg-accent1);
-    top: 0;
-    overflow-x: hidden;
-    position: sticky;
-    padding: 4px 8px 4px 8px;
-}
-
-.nav-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    align-self: flex-start;
-}
-
-.hamburger-icon {
-    width: 20px;
-    height: 2px;
-    background-color: var(--col-fg-accent);
-    margin: 4px 0;
-
-}
-
-.date {
-    align-self: flex-end;
-}
-
-
 /*== Navigation Pane
 */
 :root {
-    --nav-col-bg: var(--col-bg-accent1);
-    --nav-col-fg: var(--col-fg-accent);
+    --nav-col-bg: var(--col-bg);
+    --nav-col-fg: var(--col-fg);
     --nav-width: 200px;
     --nav-list-indent: 16px;
     --nav-list-col-h1: var(--col-fg);
     --nav-list-col-h2: var(--col-fg2);
     --nav-list-col-link: var(--col-fg1);
-    --nav-list-col-link-hovered: var(--col-fg-accent);
+    --nav-list-col-link-hovered: var(--col-fg);
 }
 
 .nav {
@@ -101,6 +66,7 @@ body {
     z-index: 1;
     position: fixed;
     overflow-x: hidden;
+    border-right: 4px solid var(--col-bg-accent);
 
 }
 
@@ -118,7 +84,7 @@ body {
 }
 
 .nav-list {
-    padding: 0px 10px 0px 32px;
+    padding: 0px 16px 16px 32px;
     overflow: scroll;
     user-select: none; /* Chrome and Opera */
     -moz-user-select: none; /* Firefox */
@@ -128,9 +94,11 @@ body {
 
 .nav-list span {
     display: block;
+    white-space: nowrap;
 }
 
 .nav-list a {
+    white-space: nowrap;
     display: block;
     color: var(--nav-list-col-link);
     text-decoration: none;
@@ -179,6 +147,8 @@ body {
 /*== Content Page
 */
 .page { 
+    background-color: var(--col-bg);
+    padding: 32px;
     margin-left: var(--nav-width);
     padding-left: 32px;
     padding-right: 32px;
@@ -213,18 +183,46 @@ body {
     color: var(--col-fg-accent);
 }
 
+.hamburger-icon-line {
+    width: 32px;
+    height: 4px;
+    background-color: var(--col-fg-accent);
+    margin: 8px 0;
+}
 
 /*== Device Specific
 */
+@media not screen and (max-width: 480px) {
+    .nav {
+        width: var(--nav-width);
+    }
+    .page { 
+        margin-left: var(--nav-width);
+    }
+    .float-button {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .nav {
         width: 0;
-        border-right: 0;
-    }
-    .main-header {
-        margin-left: 0;
     }
     .page { 
         margin-left: 0;
     }
+    .float-button {
+        position: fixed;
+        width: 64px;
+        height: 64px;
+        right: 32px;
+        bottom: 32px;
+        background-color: var(--col-bg-accent);
+        color: var(--col-fg-accent);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 64px;
+    }
 }
+
