@@ -48,6 +48,7 @@ body {
     --nav-col-bg: var(--col-bg);
     --nav-col-fg: var(--col-fg);
     --nav-width: 200px;
+    --nav-border-right: 4px solid var(--col-bg-accent);
     --nav-list-indent: 16px;
     --nav-list-col-h1: var(--col-fg);
     --nav-list-col-h2: var(--col-fg2);
@@ -66,7 +67,7 @@ body {
     z-index: 1;
     position: fixed;
     overflow-x: hidden;
-    border-right: 4px solid var(--col-bg-accent);
+    border-right: var(--nav-border-right);
 
 }
 
@@ -192,9 +193,10 @@ body {
 
 /*== Device Specific
 */
-@media not screen and (max-width: 480px) {
+@media not screen and (max-width: 680px) {
     .nav {
         width: var(--nav-width);
+        border-right: var(--nav-border-right)
     }
     .page { 
         margin-left: var(--nav-width);
@@ -204,9 +206,10 @@ body {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 680px) {
     .nav {
         width: 0;
+        border: 0;
     }
     .page { 
         margin-left: 0;
