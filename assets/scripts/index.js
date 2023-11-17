@@ -1,3 +1,6 @@
+let currPage = "pages/home.html"
+let navOpen = true
+
 function loadPage(page) {
     sessionStorage.setItem("currPage", page);
     $(document).ready(function() {
@@ -17,21 +20,39 @@ function reloadPage()
 }
 
 function toggleNav() {
-    let ele = document.querySelector(':root');
+    let ele = document.querySelector(":root");
     let css = getComputedStyle(ele);
 
     let nav = document.getElementById("nav");
     let navWidth = css.getPropertyValue("--nav-width");
 
-    if (nav.style.width == "0px") {
-        nav.style.width = navWidth;
-    } else {
+    if (navOpen) {
         nav.style.width = "0";
+        navOpen = !navOpen
+    } else {
+        nav.style.width = navWidth;
+        navOpen = !navOpen
     }
 }
 
+const mql = window.matchMedia("screen and (max-width: 480px)");
+
+if (mql.matches) {
+    navOpen = false
+} else {
+    navOpen = true 
+}
+
+mql.addEventListener("change", function(e) {
+    if (e.matches) {
+        navOpen = false
+    } else {
+        navOpen = true 
+    }
+});
+
 window.addEventListener('resize', function() {
     let nav = document.getElementById("nav");
-    nav.style.width = "";
+    nav.style = "";
 }, true);
 
